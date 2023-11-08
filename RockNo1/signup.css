@@ -1,0 +1,45 @@
+@media only screen and (max-width: 800px){
+    body{
+        overflow-y: auto;
+    }
+    .positionTitle2{
+        position: absolute;
+        margin-left: 0;
+        width: 100%;
+        border-left: 0;
+        border-right: 0;
+        border: 0;
+    }
+    .frontParagraph{
+        margin-right: 70px;
+    }
+    .submitButton{
+        width: 200px;
+    }
+    .emailInput{
+        width: 350px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.fadePage {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}

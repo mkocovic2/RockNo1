@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>rockno1</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="changeLan.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li
+                    class="logo"
+                    onclick="window.location.href='frontPage.html'"></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="artPage.html">Art</a></li>
+                <li><a href="members.html">Events</a></li>
+            </ul>
+        </nav>
+        <div class="fadePage">
+            <img class="building"src="images/bBuild.png">
+            <div class="positionTitle2">
+                <h1 class="signUpText">Sign Up</h1>
+                <p class="frontParagraph">
+                    By subscribing to our newsletter, you'll gain insider access to
+                    a world of musical brilliance. Be the first to know about
+                    upcoming releases, including album launches, singles, and music
+                    videos. Discover the stories behind our songs, as we take you on
+                    a journey through our creative process and inspirations.
+                </p>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    class="emailInput" />
+                <button id="send" class="submitButton">Submit</button>
+            </div>
+        <div>
+
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+            import {
+                getDatabase,
+                ref,
+                push,
+                set,
+            } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyDtQC9VZ87XrCbIHxVA_eBbx2QkNE5YyTg",
+                authDomain: "rockno1-1653c.firebaseapp.com",
+                databaseURL:
+                    "https://rockno1-1653c-default-rtdb.firebaseio.com",
+                projectId: "rockno1-1653c",
+                storageBucket: "rockno1-1653c.appspot.com",
+                messagingSenderId: "675786142024",
+                appId: "1:675786142024:web:a70c853eaabef626f8837d",
+                measurementId: "G-J0Z1GGK2BD",
+            };
+
+            const app = initializeApp(firebaseConfig);
+            const database = getDatabase(app);
+
+            const sendButton = document.querySelector("#send");
+            const emailInput = document.querySelector("#email");
+
+            sendButton.addEventListener("click", () => {
+                const email = emailInput.value.trim();
+
+                if (email !== "") {
+                    const emailsRef = ref(database, "emails");
+                    const newEmailRef = push(emailsRef);
+                    const newEmailKey = newEmailRef.key;
+                    set(newEmailRef, email)
+                        .then(() => {
+                            alert("Email submitted successfully!");
+                            emailInput.value = "";
+                        })
+                        .catch((error) => {
+                            console.error("Error submitting email:", error);
+                        });
+                } else {
+                    alert("Please enter a valid email!");
+                }
+            });
+        </script>
+    </body>
+</html>

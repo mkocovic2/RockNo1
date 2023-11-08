@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'crushText';
+    src: url(fonts/MolendRegular-rgnBx.otf);
+}
+@font-face {
+    font-family: 'paraText';
+    src: url(fonts/Helmet-Regular.ttf);
+}
+
+body{
+    background-color: #000000;
+    overflow-x: hidden;
+}
+h1 {
+    font-family: 'crushText', sans-serif;
+    color: #ffffff;
+}
+h2{
+    font-family: 'crushText', sans-serif;
+    color: #ffffff;
+}
+p{
+    font-family: 'paraText', sans-serif;
+    color: #ffffff;
+}
+.navbar {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar ul {
+    font-family: 'lightbus', sans-serif;
+    list-style: none;
+    margin-top: 35px;
+    padding: 0;
+    font-size: 20px;
+    text-align: right;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease; 
+}
+.navbar li a:hover {
+    color: rgb(54, 152, 115);
+}
+
+#titleFont{
+    position: relative;
+    font-size: 125px;
+    height: 140px;
+    margin-top: 100px;
+    margin-left: 0;
+}
+
+h1#titleFont {
+    margin-bottom: 0.1px;
+}
+
+.positionTitle{
+    position: relative;
+    top: 50px;
+    width: 700px;
+    height: 500px;
+    margin-left: 30px;
+}
+.underText{
+    position: relative;
+    bottom: 20px;
+    font-size: 30px;
+}
+
+.frontParagraph{
+    font-size: 20px;
+    position: relative;
+    bottom: 30px;
+}
+
+.titleParagraph{
+    font-size: 27px;
+    bottom: 30px;
+    width: 100%;
+}
+
+.logo{
+    background-image: url(images/bLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 75px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.signContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.signUpButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    font-size: 32px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+    width: 200px;
+}
+
+.signUpButton:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+#loginFont {
+    font-family: paraText;
+}
+
+.coolLine{
+    background-image: url(images/coolLine2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 50px;
+    float:right;
+    margin-left: 35px;
+    border: 2px solid #ffffff;
+    filter: invert(100%);
+}
+
+.positionTitle2{
+    position: relative;
+    margin-top: 265px;
+    margin-bottom: 200px;
+    width: 600px;
+    height: 450px;
+    display: flex; 
+    flex-direction: column;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    background-color: black;
+    z-index: 1;
+    margin-right: 100px;
+    margin-left: 100px;
+    float: right;
+}
+.signUpText{
+    font-size: 30px;
+}
+.emailInput {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.submitButton {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 20px;
+    margin-top: 35px;
+    font-family: 'paraText', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+  
+.submitButton:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.makeRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.building{
+    position: fixed;
+    bottom: -215px;
+}
+
+.imageContainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/frontImage2.png');
+    margin-left: 820px;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.fadePage {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@media only screen and (max-height: 950px){
+    #titleFont{
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    body{
+        overflow-y: auto;
+    }
+    .positionTitle2{
+        position: absolute;
+        margin-left: 0;
+        width: 100%;
+        border-left: 0;
+        border-right: 0;
+        border: 0;
+    }
+    .frontParagraph{
+        margin-right: 70px;
+    }
+    .submitButton{
+        width: 200px;
+    }
+    .emailInput{
+        width: 350px;
+    }
+    .positionTitle{
+        width: 100%;
+        margin-right: 15px;
+    }
+    h1#titleFont{
+        font-size: 80px;
+        margin-bottom: -25px;
+    }
+    .titleParagraph{
+        margin-right: 60px;
+    }
+    .underText{
+        font-size: 20px;
+    }
+    .imageContainer{
+        display: none;
+    }
+}
+@media only screen and (max-width: 520px){
+    h1#titleFont{
+        font-size: 60px;
+        margin-bottom: -45px;
+    }
+    .titleParagraph{
+        margin-right: 60px;
+        font-size: 20px;
+    }
+    .underText{
+        font-size: 15px;
+    }
+    .imageContainer{
+        display: none;
+    }
+    .coolLine{
+        display: none;
+    }
+}

@@ -1,0 +1,29 @@
+.positionArt{
+    position: relative;
+    top: 5vh;
+    width: 140vh;
+    height:40vh;
+    margin-left: 5px;
+    display: flex; 
+    flex-direction: row;
+    margin-top: 3vh;
+}
+img {
+    max-width: 500px;
+    max-height: 300px; 
+    border: 2px solid #ffffff;
+    margin: 1vh;
+}
+#artFont{
+    position: relative;
+    font-size: 15vmin;
+    height: 15vh;
+}
+h1#artFont {
+    margin-bottom: 0.1px;
+}
+body{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+

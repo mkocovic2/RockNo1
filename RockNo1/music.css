@@ -1,0 +1,49 @@
+h1 {
+    margin: 0;
+}
+
+
+.positionMusic{
+    position: relative;
+    display: flex; 
+    flex-direction: row;
+    margin-top: 3vh;
+    justify-content: space-between;
+
+}
+.demoTitle {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-top: 200px;
+}
+.tracks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    border: 2px solid #ffffff;
+    margin-top: 15px;
+}
+.tracks p{
+    padding-left: 10px;
+}
+.moveDemo{
+    position: absolute;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.demoBox{
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+#sideImageL{
+    background-repeat: repeat-y;
+}
+#sideImageR{
+    background-repeat: repeat-y;
+}
