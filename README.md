@@ -4,4 +4,7 @@ RockNo1 is a band website made to share music and art. The website uses a user-f
 ## Features
 - Cloud-Based Server: The website uses Firebase as the back-end, which allows the website to display images and music tracks. Firebase also contains a database to store user information, primarily emails.
 - Dynamic Image Upload: Images can be dynamically uploaded through Firebase, allowing for the addition of images from anywhere. The page hosting these images updates dynamically as well.
-- Dynamic Track Upload: The same thing with the images. MP3 and even MP4 files can be uploaded dynamically. 
+- Dynamic Track Upload: The same thing with the images. MP3 and even MP4 files can be uploaded dynamically.
+
+## Usage
+RockNo1 can host multiple bands within one website. Firebase allows for easy data sharing between various parties, allowing people with no experience in back-end development to upload pictures and music tracks to the website with ease. 
